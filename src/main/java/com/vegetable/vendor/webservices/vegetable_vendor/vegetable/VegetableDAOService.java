@@ -4,6 +4,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 @Component
 public class VegetableDAOService
@@ -19,5 +20,17 @@ public class VegetableDAOService
     public List<Vegetable> findAll()
     {
         return vegetables;
+    }
+
+    public Vegetable findOne(String item)
+    {
+        Predicate<? super Vegetable> predicate = vegetable -> vegetable.getItem().equals(item);
+        return vegetables.stream().filter(predicate).findFirst().get();
+    }
+
+    public Vegetable save(Vegetable vegetable)
+    {
+        vegetables.add(vegetable);
+        return vegetable;
     }
 }

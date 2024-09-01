@@ -2,6 +2,10 @@ package com.vegetable.vendor.webservices.vegetable_vendor.vegetable;
 
 public class Vegetable
 {
+//    public Vegetable()
+//    {
+//
+//    }
     private Double price;
     private Double quantity;
     private String item;
@@ -50,4 +54,6 @@ public class Vegetable
                 ", item='" + item + '\'' +
                 '}';
     }
+
+
 }

@@ -1,5 +1,11 @@
 package com.vegetable.vendor.webservices.vegetable_vendor.vegetable;
 
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+
+@Entity
 public class Vegetable
 {
 //    public Vegetable()
@@ -8,6 +14,8 @@ public class Vegetable
 //    }
     private Double price;
     private Double quantity;
+    @Id
+    @GeneratedValue
     private String item;
 
     public Vegetable(Double price, Double quantity, String item) {

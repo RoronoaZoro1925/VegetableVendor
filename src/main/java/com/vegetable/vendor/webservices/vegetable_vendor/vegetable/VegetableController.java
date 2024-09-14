@@ -32,4 +32,10 @@ public class VegetableController
         service.save(vegetable);
     }
 
+    @DeleteMapping ("/vegetable-list/{item}")
+    public void deleteVegetable(@PathVariable String item)
+    {
+        service.deleteByName(item);
+    }
+
 }

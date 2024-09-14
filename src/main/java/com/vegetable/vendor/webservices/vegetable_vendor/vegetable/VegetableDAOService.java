@@ -33,4 +33,11 @@ public class VegetableDAOService
         vegetables.add(vegetable);
         return vegetable;
     }
+
+    public void deleteByName(String item)
+    {
+        Predicate<? super Vegetable> predicate = vegetable -> vegetable.getItem().equals(item);
+        vegetables.removeIf(predicate);
+
+    }
 }

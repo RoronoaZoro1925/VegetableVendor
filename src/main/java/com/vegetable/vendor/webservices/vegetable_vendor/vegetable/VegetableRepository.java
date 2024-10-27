@@ -1,4 +1,6 @@
 package com.vegetable.vendor.webservices.vegetable_vendor.vegetable;
 
-public interface VegetableRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface VegetableRepository extends JpaRepository<Vegetable, String> {
 }

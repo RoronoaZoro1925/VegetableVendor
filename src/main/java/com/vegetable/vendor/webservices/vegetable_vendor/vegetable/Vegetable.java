@@ -8,15 +8,27 @@ import jakarta.persistence.Id;
 @Entity
 public class Vegetable
 {
-//    public Vegetable()
-//    {
-//
-//    }
-    private Double price;
-    private Double quantity;
+    protected Vegetable()
+    {
+
+    }
+
     @Id
     @GeneratedValue
+    private Integer id;
+    private Double price;
+    private Double quantity;
+
+
     private String item;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public Vegetable(Double price, Double quantity, String item) {
         this.price = price;
@@ -59,9 +71,8 @@ public class Vegetable
         return "Vegetable{" +
                 "price=" + price +
                 ", quantity=" + quantity +
+                ", id=" + id +
                 ", item='" + item + '\'' +
                 '}';
     }
-
-
 }

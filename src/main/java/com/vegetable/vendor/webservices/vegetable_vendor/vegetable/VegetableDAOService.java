@@ -1,5 +1,6 @@
 package com.vegetable.vendor.webservices.vegetable_vendor.vegetable;
 
+import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -28,6 +29,7 @@ public class VegetableDAOService
         return vegetables.stream().filter(predicate).findFirst().get();
     }
 
+//    @Transactional
     public Vegetable save(Vegetable vegetable)
     {
         vegetables.add(vegetable);
